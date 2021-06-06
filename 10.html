@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jastuci u 3D</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!--Button za prelazak na sljedeci html-->
+<div class="LD">
+    <button class="button1" onClick="location='9.html'"><</button>
+    <button class="button2" onClick="location='10.html'" disabled>></button>
+</div>
+
+<div class="cijena">
+    <h1>280 kn</h1>
+</div>
+
+<script type="module">
+
+    import * as THREE from '../build/three.module.js';
+    import { GLTFLoader } from '../GLTFLoader.js';
+    import { OrbitControls } from '../jsm/controls/OrbitControls.js';
+ 
+    const sizes = {
+        width: window.innerWidth,
+        height: window.innerHeight
+    }
+
+    const renderer = new THREE.WebGLRenderer({antialias: true});
+    const camera = new THREE.PerspectiveCamera(12, sizes.width / sizes.height, 1, 1000);
+    const scene = new THREE.Scene();
+    
+    let light;
+
+    
+    function init() {
+        scene.background = new THREE.Color('black');
+        camera.position.set(0, 5, 25);
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+    }
+
+    function setLight() {
+        light = new THREE.AmbientLight(0xffffff);
+        scene.add(light);
+    }
+
+//Uvoz modela jastuka   
+const loader = new GLTFLoader();
+
+loader.load('./modeli/10.gltf', function ( gltf ) {
+		
+		gltf.scene.position.set( 0, 0, 0 );
+		scene.add( gltf.scene );
+	}
+);
+
+//Svjetlo samo za jastuk
+const directionalLight = new THREE.DirectionalLight( 0xffffff, 0.5 );
+scene.add( directionalLight );
+
+//Za okretanje kamere, zumiranje i odzumiranje
+const controls = new OrbitControls( camera, renderer.domElement );
+camera.position.set( 0, 20, 100 );
+
+//Limit zumiranja i odzumiranja
+controls.minDistance = 10
+controls.maxDistance = 50
+
+//Za smooth controls
+controls.enableDamping = true;
+
+
+
+controls.update();
+
+//Resize windowa
+window.addEventListener('resize', () =>
+{
+    
+    sizes.width = window.innerWidth
+    sizes.height = window.innerHeight
+
+    camera.aspect = sizes.width / sizes.height
+    camera.updateProjectionMatrix()
+
+    renderer.setSize(sizes.width, sizes.height)
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+})
+
+//Fullscreen
+window.addEventListener('dblclick', () => 
+{
+	document.documentElement.requestFullscreen()
+})
+
+
+    function animate() {
+        requestAnimationFrame(animate);
+        
+        //Za automatsko okretanje
+        controls.autoRotate = true;
+        controls.update ();
+
+        renderer.render(scene, camera);
+    }
+
+    init();
+    setLight();
+    animate();
+</script>
+</body>
+</html>
