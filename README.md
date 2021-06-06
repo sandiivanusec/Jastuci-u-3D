@@ -1,5 +1,7 @@
 # Jastuci-u-3D
 
+https://jastuciu3d.000webhostapp.com/
+
 Ideja za ovaj projekt proizašla je iz problema s kojim se često susreću YouTuberi. Naime kako bi YouTuberi mogli zarađivati od izrade svojih videozapisa nudi im se više mogućnosti poput:
 
 •	Reklama
