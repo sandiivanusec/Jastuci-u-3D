@@ -4,7 +4,7 @@ https://jastuciu3d.000webhostapp.com/
 
 
 - Mentor: doc. dr. sc. Nikola Tanković
-- Redvoiti student: Sandi Ivanušec
+- Redoviti student: Sandi Ivanušec
 
 - Diplomski rad: Ostvarivanje 3D grafike u Internet preglednicima pomoću biblioteke Three.js
 - Predmet: Izrada informatičkih projekata
