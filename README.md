@@ -9,7 +9,7 @@ https://jastuciu3d.000webhostapp.com/
 - Diplomski rad: Ostvarivanje 3D grafike u Internet preglednicima pomoću biblioteke Three.js
 - Predmet: Izrada informatičkih projekata
 
-- Fakultet: Fakultet informatike u Puli
+- Studij: Fakultet informatike u Puli
 - Pula, lipanj, 2021.
 
 
