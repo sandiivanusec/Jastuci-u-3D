@@ -2,6 +2,17 @@
 
 https://jastuciu3d.000webhostapp.com/
 
+
+- Mentor: doc. dr. sc. Nikola Tanković
+- Redvoiti student: Sandi Ivanušec
+
+- Diplomski rad: Ostvarivanje 3D grafike u Internet preglednicima pomoću biblioteke Three.js
+- Predmet: Izrada informatičkih projekata
+
+- Fakultet: Fakultet informatike u Puli
+- Pula, lipanj, 2021.
+
+
 Ideja za ovaj projekt proizašla je iz problema s kojim se često susreću YouTuberi. Naime kako bi YouTuberi mogli zarađivati od izrade svojih videozapisa nudi im se više mogućnosti poput:
 
 •	Reklama
