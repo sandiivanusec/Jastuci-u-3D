@@ -1,7 +1,5 @@
 # Jastuci-u-3D
 
-https://jastuciu3d.000webhostapp.com/
-
 
 - Mentor: doc. dr. sc. Nikola Tanković
 - Redoviti student: Sandi Ivanušec
